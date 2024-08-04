@@ -1,0 +1,17 @@
+footer {
+  display: flex;
+  padding: 64px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 6px solid #fdba74;
+  background-color: #181818;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 140%; /* 25.2px */
+  opacity: 0.7;
+}

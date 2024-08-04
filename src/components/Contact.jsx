@@ -8,7 +8,7 @@ function Contact() {
         <p>We’d love to hear from you. Please fill out this form.</p>
       </div>
       <div className="contact-form">
-        <form>
+        <form action="https://formspree.io/f/mjkbwleo" method="POST">
           <div className="form-fields">
             <div className="full-name">
               <div className="first-name">
@@ -52,7 +52,7 @@ function Contact() {
               />
             </div>
             <div className="accept-policy">
-              <input type="checkbox" id="checkbox" />
+              <input type="checkbox" id="checkbox" required />
               <label htmlFor="checkbox">
                 You agree to our <span>terms</span> &{" "}
                 <span>privacy policy</span>.
