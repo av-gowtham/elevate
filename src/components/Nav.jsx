@@ -1,5 +1,6 @@
 import logo from "../assets/logo.svg";
 import hamburger from "../assets/hamburger.svg";
+import cross from "../assets/cross.svg";
 import "../header.css";
 
 function Nav({ toggleNav, isValid }) {
@@ -11,7 +12,7 @@ function Nav({ toggleNav, isValid }) {
         </a>
         <div className="hamburger" onClick={toggleNav}>
           <button>
-            <img src={hamburger} alt="hamburger" />
+            <img src={isValid ? cross : hamburger} alt="hamburger" />
           </button>
         </div>
         <div className={`list ${isValid ? " active" : ""}`}>
