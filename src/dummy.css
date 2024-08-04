@@ -1,0 +1,68 @@
+@media (max-width: 1340px) {
+  .about-us-info {
+    gap: 24px;
+  }
+
+  .about-us-info img {
+    width: 454px;
+    height: 350px;
+    border-radius: 16px;
+  }
+
+  .about-us-bottom {
+    width: 544px;
+    padding: 0px 32px;
+    gap: 56px;
+  }
+
+  .about-us-experience div {
+    width: 200px;
+    gap: 16px;
+  }
+
+  .our-mission p {
+    width: 450px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1340px) {
+  #About-Us {
+    padding: 48px 48px 48px 60px;
+  }
+
+  .about-us-info img {
+    width: 454px;
+    height: 350px;
+    border-radius: 16px;
+  }
+
+  .about-us-bottom {
+    width: 544px;
+    padding: 0px 32px;
+    gap: 38px;
+  }
+}
+
+@media (max-width: 1340px) {
+  .about-us-info img {
+    width: 400px;
+    height: 300px;
+    border-radius: 16px;
+  }
+
+  .about-us-bottom {
+    width: fit-content;
+    padding: 0px 16px;
+    gap: 32px;
+  }
+  .about-us-experience p {
+    width: 140px;
+    font-size: 16px;
+  }
+
+  .our-mission p {
+    width: 400px;
+    font-size: 16px;
+  }
+}

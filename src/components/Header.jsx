@@ -1,36 +1,10 @@
-import logo from "../assets/logo.svg";
 import "../header.css";
 
-function Header() {
+function Header({ onNavClose }) {
+  console.log("nav close");
   return (
-    <div id="Header">
+    <header id="Header" onClick={onNavClose}>
       <div className="fade"></div>
-
-      <nav>
-        <a href="#Header">
-          <img src={logo} alt="Logo" />
-        </a>
-        <div>
-          <ul>
-            <li>
-              <a href="#Header">Home</a>
-            </li>
-            <li>
-              <a href="#About-Us">About Us</a>
-            </li>
-            <li>
-              <a href="#Services">Services</a>
-            </li>
-            <li>
-              <a href="#Projects">Projects</a>
-            </li>
-          </ul>
-
-          <a href="#Contact-Us">
-            <button>Contact Us</button>
-          </a>
-        </div>
-      </nav>
 
       <div className="hero-text">
         <h1>Transforming Spaces with timeless Elegance and Style</h1>
@@ -48,7 +22,7 @@ function Header() {
           </a>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
 

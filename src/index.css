@@ -27,3 +27,51 @@ html {
 button {
   cursor: pointer;
 }
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --font-size-1: 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --font-size-1: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-1: 42px;
+  }
+}
+
+@media (max-width: 475px) {
+  :root {
+    --font-size-1: 36px;
+  }
+}
+
+@media (max-width: 425px) {
+  :root {
+    --font-size-1: 36px;
+  }
+}
+
+@media (max-width: 325px) {
+  :root {
+    --font-size-1: 32px;
+  }
+}

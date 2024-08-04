@@ -24,65 +24,89 @@
 }
 
 nav {
+  position: fixed;
+  left: 0;
+  margin: 0 5vw;
+  top: 16px;
+  z-index: 999;
+}
+
+nav > div {
   display: flex;
   width: 90vw;
   padding: 16px 16px 16px 32px;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  left: 0;
-  margin: 0 5vw;
-  top: 16px;
   border-radius: 100px;
   background-color: rgba(24, 24, 24, 0.64);
   backdrop-filter: blur(20px);
-  z-index: 999;
+  position: relative;
 }
 
-nav img {
+nav > div img {
   width: 160px;
-  height: 23.94px;
+  height: 24px;
 }
 
-nav div {
+nav > div .hamburger img {
+  display: none;
+  height: 36px;
+  width: 36px;
+  padding: 8px;
+  border-radius: 100%;
+  background-color: #fcbe7c;
+}
+
+.hamburger button {
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background: none;
+}
+
+nav > div .list {
   display: flex;
   align-items: center;
   gap: 40px;
 }
 
-nav div ul {
+nav > div .list ul {
   display: flex;
   align-items: center;
   gap: 48px;
   list-style: none;
 }
 
-nav div ul a {
+nav > div .list ul a {
   text-decoration: none;
   color: #fff;
   font-family: var(--secondary-font);
   font-size: 22px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  transition: all 0.25s;
 }
 
-nav button {
+nav > div .list ul a:hover {
+  color: #fcbe7c;
+}
+
+nav > div a button {
   padding: 8px 14px;
   border-radius: 100px;
   background-color: #fcbe7c;
   color: #181818;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
   border: none;
   transition: all 0.25s;
 }
 
-/* nav button:hover {
-  background-color: #ff9b2f;
-} */
+nav > div a button:hover {
+  box-shadow: 0px 0px 16px #fcbe7cd0;
+}
 
-nav a {
+nav > div a {
   text-decoration: none;
 }
 
@@ -95,7 +119,20 @@ nav a {
   gap: 24px;
   z-index: 1;
   position: relative;
-  top: 6vh;
+  top: 9vh;
+  animation: hero 1s ease-out;
+}
+
+@keyframes hero {
+  from {
+    opacity: 0.5;
+    transform: translateY(100vh);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-text h1 {
@@ -125,6 +162,27 @@ nav a {
   flex-wrap: wrap;
 }
 
+.hero-btn-1,
+.hero-btn-2 {
+  position: relative;
+  animation: btn 1s ease-out;
+  top: 0;
+}
+
+@keyframes btn {
+  0% {
+    transform: translateY(90vh);
+  }
+
+  50% {
+    transform: translateY(40vh);
+  }
+
+  100% {
+    transform: translateY(0vh);
+  }
+}
+
 .hero-btn-1 {
   padding: 14px 22px;
   border-radius: 100px;
@@ -148,4 +206,327 @@ nav a {
 
 .hero-text a {
   text-decoration: none;
+}
+
+/* media queries */
+
+@media (max-width: 1150px) {
+  nav > div {
+    padding: 12px 12px 12px 28px;
+  }
+
+  nav > div .list ul a {
+    font-size: 18px;
+  }
+
+  nav > div a button {
+    padding: 6px 12px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  nav > div {
+    padding: 12px 12px 12px 28px;
+  }
+
+  nav > div img {
+    width: 140px;
+    height: 20px;
+  }
+
+  nav > div .list {
+    gap: 30px;
+  }
+
+  nav > div .list ul {
+    gap: 24px;
+  }
+
+  nav > div .list ul a {
+    font-size: 18px;
+  }
+
+  nav > div a button {
+    padding: 6px 12px;
+    font-size: 20px;
+  }
+
+  .hero-text {
+    width: 657px;
+    /* height: 346px; */
+    gap: 20px;
+  }
+
+  .hero-text p {
+    width: 524px;
+    font-size: 18px;
+  }
+
+  .hero-text div {
+    gap: 20px;
+  }
+
+  .hero-btn-1,
+  .hero-btn-2 {
+    padding: 12px 20px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  nav > div {
+    padding: 10px 10px 10px 24px;
+  }
+
+  nav > div img {
+    width: 120px;
+    height: 20px;
+  }
+
+  nav > div .list {
+    gap: 30px;
+  }
+
+  nav > div .list ul {
+    gap: 20px;
+  }
+
+  nav > div .list ul a {
+    font-size: 18px;
+  }
+
+  nav > div a button {
+    padding: 6px 12px;
+    font-size: 18px;
+  }
+
+  .hero-text {
+    width: 600px;
+    gap: 18px;
+  }
+
+  .hero-text p {
+    width: 450px;
+    font-size: 16px;
+  }
+
+  .hero-text div {
+    gap: 16px;
+  }
+
+  .hero-btn-1,
+  .hero-btn-2 {
+    padding: 10px 16px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav > div {
+    padding: 10px 10px 10px 24px;
+    border-radius: 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav > div img {
+    width: 120px;
+    height: 20px;
+  }
+
+  nav > div .hamburger {
+    display: flex;
+    justify-content: end;
+  }
+
+  nav > div .hamburger img {
+    display: block;
+  }
+
+  nav > div .list {
+    display: none;
+    margin-top: 30px;
+    padding: 0 30px 20px 0;
+    grid-column: span 2;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    transition: all 1s ease-out;
+  }
+
+  nav > div .active {
+    display: flex;
+    animation: nav 0.5s ease-out;
+  }
+
+  @keyframes nav {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: 212px;
+    }
+  }
+
+  nav > div .list .closing {
+    animation: close 0.5s ease-out forwards;
+    overflow: hidden;
+  }
+
+  nav > div .list ul {
+    flex-direction: column;
+  }
+
+  nav > div .list li a {
+    font-size: 16px;
+    position: relative;
+    animation: nav-li 0.5s ease-out;
+  }
+
+  nav > div a button {
+    padding: 6px 12px;
+    font-size: 16px;
+    position: relative;
+    animation: nav-li 0.5s ease-out;
+  }
+
+  @keyframes nav-li {
+    0% {
+      top: 200px;
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+
+  .hero-text {
+    width: 500px;
+  }
+
+  .hero-text p {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav > div {
+    padding: 10px 10px 10px 24px;
+    border-radius: 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav > div img {
+    width: 120px;
+    height: 20px;
+  }
+
+  nav > div .hamburger {
+    display: flex;
+    justify-content: end;
+  }
+
+  nav > div .hamburger img {
+    display: block;
+  }
+
+  nav > div .list {
+    display: none;
+    margin-top: 30px;
+    padding: 0 30px 20px 0;
+    grid-column: span 2;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    transition: all 1s ease-out;
+  }
+
+  nav > div .active {
+    display: flex;
+    animation: nav 0.5s ease-out;
+  }
+
+  @keyframes nav {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: 212px;
+    }
+  }
+
+  nav > div .list .closing {
+    animation: close 0.5s ease-out forwards;
+    overflow: hidden;
+  }
+
+  nav > div .list ul {
+    flex-direction: column;
+  }
+
+  nav > div .list li a {
+    font-size: 16px;
+    position: relative;
+    animation: nav-li 0.5s ease-out;
+  }
+
+  nav > div a button {
+    padding: 6px 12px;
+    font-size: 16px;
+    position: relative;
+    animation: nav-li 0.5s ease-out;
+  }
+
+  .hero-text {
+    width: 500px;
+  }
+
+  .hero-text p {
+    width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-text {
+    width: 360px;
+  }
+
+  .hero-text p {
+    width: 320px;
+  }
+}
+
+@media (max-width: 425px) {
+  nav > div {
+    padding: 6px 6px 6px 18px;
+    border-radius: 20px;
+  }
+
+  nav > div img {
+    width: 100px;
+    height: 20px;
+  }
+
+  nav > div .hamburger img {
+    height: 32px;
+    width: 32px;
+  }
+
+  .hero-text {
+    width: 320px;
+  }
+
+  .hero-text p {
+    width: 300px;
+  }
 }
