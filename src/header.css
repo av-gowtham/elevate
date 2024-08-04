@@ -34,7 +34,7 @@ nav {
   margin: 0 5vw;
   top: 16px;
   border-radius: 100px;
-  background: rgba(24, 24, 24, 0.64);
+  background-color: rgba(24, 24, 24, 0.64);
   backdrop-filter: blur(20px);
   z-index: 999;
 }
@@ -70,12 +70,17 @@ nav div ul a {
 nav button {
   padding: 8px 14px;
   border-radius: 100px;
-  background: #fcbe7c;
+  background-color: #fcbe7c;
   color: #181818;
   font-size: 20px;
   font-weight: 600;
   border: none;
+  transition: all 0.25s;
 }
+
+/* nav button:hover {
+  background-color: #ff9b2f;
+} */
 
 nav a {
   text-decoration: none;

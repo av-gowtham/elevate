@@ -9,23 +9,51 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function Projects() {
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  // };
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1440, // Adjust this breakpoint as needed
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1400, // Adjust this breakpoint as needed
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1080, // Adjust this breakpoint as needed
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 680, // Adjust this breakpoint as needed
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
-
-  // const settings = {
-  //   dots: true,
-  //   className: "center",
-  //   centerMode: true,
-  //   infinite: true,
-  //   centerPadding: "60px",
-  //   slidesToShow: 3,
-  //   speed: 500,
-  // };
 
   return (
     <div id="Projects">
