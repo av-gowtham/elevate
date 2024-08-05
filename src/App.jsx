@@ -22,15 +22,17 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <Nav isValid={isValid} toggleNav={toggleNav} />
-      <Header onNavClose={HandleNavClose} />
-      <About />
-      <Services />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+      <div onClick={HandleNavClose}>
+        <Header onNavClose={HandleNavClose} />
+        <About />
+        <Services />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+    </>
   );
 }
 

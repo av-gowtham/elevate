@@ -1,9 +1,9 @@
 import "../header.css";
 
-function Header({ onNavClose }) {
+function Header() {
   console.log("nav close");
   return (
-    <header id="Header" onClick={onNavClose}>
+    <header id="Header">
       <div className="fade"></div>
 
       <div className="hero-text">
