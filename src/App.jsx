@@ -15,7 +15,7 @@ function App() {
     setIsValid(!isValid);
   }
 
-  function HandleNavClose() {
+  function handleNavClose() {
     if (isValid) {
       setIsValid(!isValid);
     }
@@ -24,8 +24,8 @@ function App() {
   return (
     <>
       <Nav isValid={isValid} toggleNav={toggleNav} />
-      <div onClick={HandleNavClose}>
-        <Header onNavClose={HandleNavClose} />
+      <div onClick={handleNavClose}>
+        <Header />
         <About />
         <Services />
         <Projects />
