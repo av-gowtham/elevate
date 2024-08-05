@@ -27,10 +27,10 @@ function App() {
       <Header onNavClose={HandleNavClose} />
       <About />
 
-      <Services />
+      {/* <Services />
       <Projects />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
