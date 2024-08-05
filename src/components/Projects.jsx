@@ -87,15 +87,6 @@ function Projects() {
           <div>
             <img src={gallery2} alt="Gallery image 2" />
           </div>
-          <div>
-            <img src={gallery3} alt="Gallery image 3" />
-          </div>
-          <div>
-            <img src={gallery4} alt="Gallery image 4" />
-          </div>
-          <div>
-            <img src={gallery5} alt="Gallery image 5" />
-          </div>
         </Slider>
       </div>
     </div>

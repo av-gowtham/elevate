@@ -26,11 +26,10 @@ function App() {
       <Nav isValid={isValid} toggleNav={toggleNav} />
       <Header onNavClose={HandleNavClose} />
       <About />
-
-      {/* <Services />
+      <Services />
       <Projects />
       <Contact />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }

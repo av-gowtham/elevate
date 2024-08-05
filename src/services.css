@@ -12,6 +12,23 @@
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  opacity: 0;
+  transform: translateY(50vh);
+  animation: services ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
+@keyframes services {
+  from {
+    opacity: 0.5;
+    transform: translateY(50vh);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .our-services h3 {
@@ -68,13 +85,12 @@
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  /* cursor: pointer;
-  transition: all 0.25s; */
+  opacity: 0;
+  transform: translateY(50vh);
+  animation: services ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
 }
-
-/* .field:hover {
-  cursor: url("/arrow-up-right.svg"), auto;
-} */
 
 .field img {
   height: 520px;
@@ -112,4 +128,132 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 140%; /* 33.6px */
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .our-services button {
+    padding: 12px 32px;
+    border-radius: 100px;
+  }
+
+  .our-services p {
+    font-size: 18px;
+    width: 70%;
+  }
+
+  .our-services a {
+    font-size: 18px;
+  }
+
+  .field img {
+    height: 400px;
+  }
+
+  .field-text {
+    gap: 6px;
+  }
+
+  .field svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .field p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  #Services {
+    padding: 48px;
+  }
+
+  .our-services button {
+    padding: 10px 28px;
+  }
+
+  .our-services p {
+    font-size: 16px;
+    width: 70%;
+  }
+
+  .our-services a {
+    font-size: 16px;
+  }
+
+  .fields {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .field img {
+    height: 380px;
+    width: 500px;
+  }
+
+  .field-text {
+    gap: 6px;
+  }
+
+  .field svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .field p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .field img {
+    height: 300px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  #Services {
+    padding: 32px;
+  }
+
+  .field img {
+    height: 300px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 425px) {
+  #Services {
+    padding: 24px;
+    gap: 48px;
+  }
+
+  .our-services p {
+    width: 80%;
+  }
+
+  .field img {
+    height: 250px;
+    width: 320px;
+  }
+}
+
+@media (max-width: 360px) {
+  #Services {
+    padding: 16px;
+    gap: 42px;
+  }
+
+  .our-services p {
+    width: 80%;
+  }
+
+  .field img {
+    height: 220px;
+    width: 280px;
+  }
 }

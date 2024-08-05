@@ -156,9 +156,24 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 580px) {
   .slider-container img {
-    width: 420px;
-    height: 500px;
+    width: 400px;
+    height: 450px;
+  }
+
+  .slick-prev:before {
+    right: 20px;
+  }
+
+  .slick-next:before {
+    left: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-container img {
+    width: 400px;
+    height: 450px;
   }
 }
